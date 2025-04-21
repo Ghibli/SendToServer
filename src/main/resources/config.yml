@@ -1,0 +1,26 @@
+# ============================================================
+# Plugin: SendToServer
+# Creato da: AlessioGTA (https://www.mclegacy.it)
+# Network: MCLEGACY
+#
+# Descrizione:
+# Questo plugin permette di trasferire un giocatore da un server all'altro
+# attraverso Velocity (supportando il canale plugin BungeeCord).
+# È pensato per essere utilizzato con NPC (come Citizens + CommandNPC)
+# per creare una navigazione tra server semplice ed efficace.
+#
+# Permessi:
+# - sendtoserver.use → consente l'uso del comando /sendtoserver
+# - sendtoserver.reload → consente il reload della configurazione
+#
+# Comandi:
+# - /sendtoserver <nome_server>
+# - /sendtoserver reload
+# ============================================================
+
+messages:
+  only-player: "&cQuesto comando può essere usato solo da un giocatore."
+  usage: "&eUso corretto: /sendtoserver <nome_server>"
+  sending: "&aTi stiamo connettendo al server &e%server%&a..."
+  no-permission: "&cNon hai il permesso per eseguire questo comando."
+  reloaded: "&aConfigurazione ricaricata con successo."
