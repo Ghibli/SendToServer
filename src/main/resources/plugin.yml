@@ -1,0 +1,19 @@
+name: Send4server
+version: '1.0'
+main: it.alessiogta.send4Server.SendToServer
+api-version: '1.21'
+authors: [ AlessioGTA ]
+description: Send player to any server in any moment!
+website: www.mclegacy.it
+commands:
+  sendtoserver:
+    description: Invia un giocatore a un altro server tramite Velocity o ricarica la config
+    usage: /sendtoserver <nome_server> oppure /sendtoserver reload
+    permission: sendtoserver.use
+permissions:
+  sendtoserver.use:
+    description: Permette di usare /sendtoserver
+    default: true
+  sendtoserver.reload:
+    description: Permette di ricaricare la configurazione
+    default: op
