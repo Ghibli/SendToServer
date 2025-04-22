@@ -1,61 +1,74 @@
-# ✈️ SendToServer
-![Java](https://img.shields.io/badge/Java-17-blue.svg)
-![Platform](https://img.shields.io/badge/Platform-Paper--Velocity-orange)
-![License](https://img.shields.io/badge/License-MIT-brightgreen)
-![Author](https://img.shields.io/badge/Made%20by-AlessioGTA-blueviolet)
+# 🚀 SendToServer v.1.4
 
-> Un plugin minimalista e veloce per **trasferire i giocatori tra server Velocity** tramite comando o NPC.  
-> Realizzato con ❤️ da **AlessioGTA** per il network **[MCLEGACY](https://www.mclegacy.it)**
+![Java](https://img.shields.io/badge/Java-17-blue?logo=java)
+![Platform](https://img.shields.io/badge/Platform-Paper%20%7C%20Velocity-blueviolet)
+![Version](https://img.shields.io/badge/Version-1.4-success)
+![License](https://img.shields.io/github/license/AlessioGTA/SendToServer)
+![Author](https://img.shields.io/badge/Author-AlessioGTA-orange)
+![Website](https://img.shields.io/badge/mclegacy.it-Visit-blue?logo=github)
 
-## 📌 Caratteristiche
-- ✅ Comando `/sendtoserver <nome_server>`
-- ✅ Compatibile con **Velocity** (tramite canale BungeeCord supportato)
-- ✅ Configurazione personalizzabile (`config.yml`)
-- ✅ Pensato per l'uso con NPC (es. **Citizens**, **CommandNPC**)
-- ✅ Colori console ANSI per un log pulito e professionale
-- ✅ Supporto per **permessi** e comando `/sendtoserver reload`
 
-## 📦 Installazione
-1. Compila o scarica il file `.jar`
-2. Inseriscilo nella cartella `plugins/` del server Paper **collegato a Velocity**
-3. Riavvia il server o esegui `/reload`
-4. Configura a piacimento il file `config.yml`
+> Plugin Minecraft Velocity + Paper per il trasferimento di giocatori tra server  
+> ✨ Creato da **AlessioGTA** per il network [MCLEGACY](https://www.mclegacy.it)
 
-## 🧪 Comandi
-| Comando                       | Descrizione                                  | Permesso                       |
-|------------------------------|----------------------------------------------|--------------------------------|
-| `/sendtoserver <server>`     | Teletrasporta un giocatore al server dato    | `sendtoserver.use`             |
-| `/sendtoserver reload`       | Ricarica il file di configurazione           | `sendtoserver.reload`          |
+---
 
-## ⚙️ Configurazione (`config.yml`)
+## 📦 Descrizione
+
+**SendToServer** è un plugin semplice e avanzato per server Paper con proxy Velocity che permette:
+
+- Il trasferimento di giocatori tra server via comando
+- Una GUI interattiva con NPC e menu cliccabili
+- Sincronizzazione automatica dei server dal proxy Velocity
+- Personalizzazione completa via config
+- Sistema dinamico `UUID → Server` aggiornato live
+
+---
+
+## 🎮 Funzionalità principali
+
+- ✅ `/sendtoserver <server>` per auto-trasferimento
+- ✅ `/sendtoserver gui` per aprire la GUI con player e server
+- ✅ GUI con teste dei player e lore informativo (server + coordinate)
+- ✅ Supporto `GetServer` e `GetServers` via Plugin Messaging
+- ✅ Tab-complete dinamico con i server reali
+- ✅ Config `server-icons:` generato automaticamente
+- ✅ Compatibile con NPC (es. Citizens + CommandNPC)
+- ✅ Configurabile al 100% (`material`, `displayName`, `slot`, lore...)
+
+---
+
+## 📂 Comandi
+
+| Comando                   | Descrizione                                 |
+|--------------------------|---------------------------------------------|
+| `/sendtoserver <server>` | Invia te stesso a un server                  |
+| `/sendtoserver gui`      | Apre la GUI interattiva                      |
+| `/sendtoserver reload`   | Ricarica il config.yml                      |
+
+---
+
+## 🔐 Permessi
+
+| Permesso                 | Descrizione                       |
+|--------------------------|-----------------------------------|
+| `sendtoserver.use`       | Accesso ai comandi base           |
+| `sendtoserver.reload`    | Ricarica il config                |
+
+---
+
+## ⚙️ Configurazione
+
+Il file `config.yml` permette di personalizzare:
+
+- Elenco server (sincronizzato automaticamente)
+- Messaggi e testi GUI
+- Lore interattiva con placeholders
+- Icone personalizzabili per ogni server:
+
 ```yaml
-# SendToServer - Plugin creato da AlessioGTA per MCLEGACY
-# Website: https://www.mclegacy.it
-# Questo plugin permette il trasferimento dei giocatori tra server Velocity
-# tramite comando o NPC con messaggi personalizzabili
-
-messages:
-  server-not-found: "&cIl server specificato non esiste o non è raggiungibile."
-  sending: "&aSei stato trasferito al server: &e%server%"
-  no-permission: "&cNon hai il permesso per eseguire questo comando."
-  config-reloaded: "&aConfigurazione ricaricata con successo!"
-  usage: "&cUtilizzo corretto: /sendtoserver <server>"
-```
-
-## 🤖 Integrazione con NPC
-Compatibile con:
-- [Citizens](https://www.spigotmc.org/resources/citizens.13811/)
-- [CommandNPC](https://www.spigotmc.org/resources/command-npc.302/)
-
-Esempio comando da legare a un NPC:
-```bash
-/sendtoserver hub
-```
-
-## 🧑‍💻 Autore
-**AlessioGTA**  
-Founder del network **MCLEGACY**  
-📍 [mclegacy.it](https://www.mclegacy.it)
-
-## 📜 Licenza
-Questo progetto è distribuito sotto licenza **MIT**. Sei libero di usarlo, modificarlo, e condividerlo citando l'autore.
+server-icons:
+  hub:
+    material: NETHER_STAR
+    name: "&bTorna all'HUB"
+    slot: 10
