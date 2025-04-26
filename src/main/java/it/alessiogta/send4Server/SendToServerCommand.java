@@ -1,5 +1,7 @@
 package it.alessiogta.send4Server;
 
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.command.*;
 import org.bukkit.entity.Player;
 
@@ -29,7 +31,23 @@ public class SendToServerCommand implements CommandExecutor {
                 return true;
             }
             plugin.reloadConfig();
-            sender.sendMessage(plugin.getMessage("reload-success"));
+            if (plugin.getConfig().getBoolean("database.enabled")) {
+                DatabaseManager.connect(plugin);
+                plugin.getLogger().info("Database attivo: connessione ricaricata.");
+            } else {
+                plugin.getLogger().warning("Database disattivato: nessuna connessione eseguita.");
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&',plugin.getMessage("database-disabled")));
+            }
+            for (Player p : Bukkit.getOnlinePlayers()) {
+                plugin.requestServer(p);
+                plugin.requestServerList(p);
+            }
+            // Reload Graph Manager (cartella graph/)
+            if (SendToServer.getInstance().getGraphStatsManager() != null) {
+                SendToServer.getInstance().getGraphStatsManager().reloadConfigs();
+            }
+
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getMessage("reload-success")));
             return true;
         }
 

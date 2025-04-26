@@ -1,0 +1,30 @@
+# Configurazione delle statistiche per SendToServer
+
+enabled: true
+this-server: survival
+
+# Se true, i server da abilitare vengono aggiornati automaticamente da Velocity
+sync-enabled: true
+
+# Ogni quanto aggiornare le statistiche (in secondi)
+save-interval-seconds: 300
+# Messaggi Sync Nella console
+show-sync-messages: true
+sync-message: "Lista server aggiornata in stats_config.yml."
+
+
+database:
+  host: localhost
+  port: 3306
+  name: mclegacy_stats
+  user: stats_user
+  password: password123
+  maxConnections: 5
+  connectionTimeout: 3000
+  timezone: Europe/Rome
+
+# Lista aggiornata solo se sync-enabled è true
+active-servers:
+  - hub
+  - survival
+  - creative

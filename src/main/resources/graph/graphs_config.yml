@@ -1,0 +1,19 @@
+# Configurazione generale dei grafici
+enabled: false
+
+# Impostazioni database
+host: localhost
+port: 3306
+name: mclegacy_graphs
+user: mc_user
+password: mc_password
+maxConnections: 10
+connectionTimeout: 3000
+
+# Timezone
+timezone: Europe/Rome
+
+# Ogni quanti secondi salvare i dati (es. 1800s = 30 minuti)
+save-interval-seconds: 1800
+show-startup-message: true
+startup-message: "&a[SendToServer] Grafici attivi: salvataggio ogni {seconds} secondi."

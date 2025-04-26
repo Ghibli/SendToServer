@@ -1,7 +1,10 @@
+#Important, put the server name as registered on velocity or bungeecoord
+server-name: default
 
 messages:
   prefix: "&6[SendToServer] "
   reload-success: "&aConfigurazione ricaricata con successo!"
+  database-disabled: '&cDatabase non attivo, per attivarlo, modifica il file &6config.yml'
   only-players: "&cSolo i giocatori possono eseguire questo comando!"
   server-not-found: "&cServer non trovato: {server}"
   player-sent: "&aGiocatore inviato al server {server}!"
@@ -19,9 +22,22 @@ gui:
 #It is possible to change the icons and the position of the servers in the menu,
 #if they are loaded at the first available space
 #
-servers:
-  - hub
-  - survival
-  - creative
+servers: []
 
-server-icons:
+server-icons: []
+
+database:
+  enabled: false
+  host: localhost
+  port: 3306
+  name: mclegacy
+  user: root
+  password: password
+  maxConnections: 10
+  connectionTimeout: 3000
+  # To configure the database time zone:
+  # List of available time zones: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  timezone: Europe/Rome
+  # To configure the timestamp format (plugin or web view only)
+  # Format reference: https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html
+  datetime-format: "dd/MM/yyyy HH:mm:ss"
