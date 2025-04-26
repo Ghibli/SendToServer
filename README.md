@@ -3,7 +3,7 @@
 ![Java](https://img.shields.io/badge/Java-17-blue?logo=java)
 ![Platform](https://img.shields.io/badge/Platform-Paper%20%7C%20Velocity-blueviolet)
 ![Version](https://img.shields.io/badge/Version-1.5-success)
-![License](https://img.shields.io/github/license/AlessioGTA/SendToServer)
+![License](https://img.shields.io/github/license/Ghibli/SendToServer)
 ![Author](https://img.shields.io/badge/Author-AlessioGTA-orange)
 ![Website](https://img.shields.io/badge/mclegacy.it-Visit-blue?logo=github)
 
