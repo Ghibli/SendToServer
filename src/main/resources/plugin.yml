@@ -1,9 +1,10 @@
 name: SendToServer
-version: 1.4
+version: 1.5
 main: it.alessiogta.send4Server.SendToServer
 api-version: 1.21.1
 author: AlessioGTA
 website: https://www.mclegacy.it
+depend: [Vault]
 commands:
   sendtoserver:
     description: Invia un giocatore a un altro server o apri la GUI
